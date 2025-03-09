@@ -35,6 +35,7 @@ class Equipment_Request(Base):
     
     id = Column(Integer, primary_key=True)
     location = Column(String(255), nullable=True)
+    number_of_dates=Column(Integer, default=1)
     start_date = Column(DateTime, nullable=True)
     quantity = Column(Integer, nullable=False)
     status = Column(String(50), default="pending")  # e.g., pending, approved, cancelled
@@ -87,6 +88,7 @@ class Hire(Base):
     __tablename__ = 'hires'
     
     id = Column(Integer, primary_key=True)
+    number_of_dates=Column(Integer, default=1)
     hire_date = Column(DateTime, default=datetime.utcnow)
     status = Column(String(50), default="pending")  # e.g., pending, completed, cancelled
     

@@ -42,5 +42,5 @@ async def health_check():
 if __name__ == "__main__":
     load_dotenv(find_dotenv())
     Base.metadata.create_all(engine)
-    uvicorn.run(app, port=8000)
+    uvicorn.run(app, port=8080)
     

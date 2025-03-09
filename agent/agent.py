@@ -7,6 +7,9 @@ from agent.tools.database import  place_request_for_equipment, place_request_for
 from langgraph.prebuilt import ToolNode
 from schema import ChatRequest
 
+memory=MemorySaver()
+
+
 def get_agent(role:str):
     if role == "super_admin":
         tools = [
@@ -32,6 +35,7 @@ def get_agent(role:str):
                         remove_equipment – Remove/delete equipment from the system.
                         remove_labour – Remove/delete labor from the system.
                     Your name is Friday, and you are used by the Super Admin.
+                    You can use the your memory to answer questions.
 
                     Your Role:
                     You assist the Super Admin by:
@@ -45,8 +49,7 @@ def get_agent(role:str):
                         Offer flexible hiring options and explain pricing clearly.
                         Provide recommendations based on user needs and budget.
                         Build trust and ensure a smooth hiring experience.
-                    If you do not know the answer, do not guess. Instead, say:
-                        "I’m sorry, but I don’t have that information. Please contact our call agent for further assistance.
+                    If you do not know the answer, do not guess.
                 """),
                 ("human", "{QUESTION}"),
             ]
@@ -63,6 +66,7 @@ def get_agent(role:str):
         prompt=[
             ("system", """You are the AI Assistant for Rise Construction. Rise Construction is a construction company that provides services like Equipment & Labor Hiring, Booking, and Payment.
             Your name is Friday, and you are used by the admins.
+
 
             Your role is to assist the admin by:
                 1. Understanding their equipment and labor needs.
@@ -82,8 +86,8 @@ def get_agent(role:str):
                 - Offer flexible hiring options and explain pricing clearly.
                 - Provide recommendations based on user needs and budget.
                 - Build trust and ensure a smooth hiring experience.
-                - If you do not know the answer, do not guess. Instead, say:  
-                    'I’m sorry, but I don’t have that information. Please contact our call agent for further assistance.'
+                - If you do not know the answer, do not guess. Instead.  
+                    
             """),
             ("human", "{QUESTION}"),
         ]
@@ -99,6 +103,7 @@ def get_agent(role:str):
         prompt=[
             ("system", """You are the AI Assistant for Rise Construction. Rise Construction is a construction company that provides services like Equipment & Labor Hiring, project Booking, and Payment.
             Your name is Friday, and you are used by the user.
+
 
             Your role is to assist the users by:
                 1. Understanding their equipment and labor needs.
@@ -116,8 +121,7 @@ def get_agent(role:str):
                 - Offer flexible hiring options and explain pricing clearly.
                 - Provide recommendations based on user needs and budget.
                 - Build trust and ensure a smooth hiring experience.
-                - If you do not know the answer, do not guess. Instead, say:  
-                    'I’m sorry, but I don’t have that information. Please contact our call agent for further assistance.'
+                - If you do not know the answer, do not guess.
             """),
             ("human", "{QUESTION}"),
         ]
@@ -164,24 +168,25 @@ def get_agent(role:str):
     graph_builder.add_edge("tools", "agent")
 
 
-    memory = MemorySaver()
-
-
     graph = graph_builder.compile(checkpointer=memory)
     
     return graph
 
 
-async def get_chat_response(request: ChatRequest):
+async def get_chat_response(request: ChatRequest, thread_id: str = "1"):
     responses = []
     graph = get_agent(request.role)
+    
+    config = {"configurable": {"thread_id": thread_id}}
+
     
     async for chunk in graph.astream(
         {
             "messages": [("human", request.message)],
         },
-        stream_mode="values",
         config=config,
+        stream_mode="values",
+        
     ):
         if chunk["messages"]:
             responses.append(chunk["messages"][-1].content)
