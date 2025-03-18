@@ -1,0 +1,57 @@
+name: rise
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  animations: ^2.0.11
+  widget_and_text_animator: ^1.1.5
+  animated_text_kit: ^4.2.2
+  google_fonts: ^6.1.0
+  path_provider: ^2.1.2
+  http: ^1.1.0
+  image_picker: ^1.0.7
+  uuid: ^4.3.3
+  shared_preferences: ^2.5.2
+  file_picker: ^9.0.2
+  path: ^1.8.3
+  flutter_dotenv: ^5.1.0
+  http_parser: ^4.0.2
+  mime: ^1.0.4
+  # Downgraded Firebase dependencies to compatible versions
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  google_sign_in: ^6.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+  - assets/images/ayubowan.png
+  - assets/images/casasdasdas.png
+  - assets/images/google_logo.png
+  - assets/images/rise_construction.png
+  - assets/images/Group_4.png
+  - assets/images/Menu.png
+  - assets/images/button.png
+  - assets/images/Camera.png
+  - assets/images/Folder.png
+  - assets/images/img.png
+  - assets/images/rise_construction01.png
+  - .env
+
+  fonts:
+  - family: TenorSans
+    fonts:
+    - asset: assets/fonts/TenorSans-Regular.ttf

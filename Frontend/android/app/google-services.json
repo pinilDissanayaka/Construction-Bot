@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "68847248294",
+    "firebase_url": "https://rise-construction-700e8-default-rtdb.firebaseio.com",
+    "project_id": "rise-construction-700e8",
+    "storage_bucket": "rise-construction-700e8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68847248294:android:6933e0b1794648fd2ce567",
+        "android_client_info": {
+          "package_name": "com.example.rise_construction_ai_bot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68847248294-arcq8lhg8aaa0mksce7e3jtlsvcmdd57.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rise_construction_ai_bot",
+            "certificate_hash": "945b64416922e410c98b04652ce6a70252461177"
+          }
+        },
+        {
+          "client_id": "68847248294-r8kcaokg10433jrss5ot50r31vij834q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rise_construction_ai_bot",
+            "certificate_hash": "b39c3efe4de2f7d373a4f7b476e9c7a174ea1610"
+          }
+        },
+        {
+          "client_id": "68847248294-vef8bvuf67djb4etdjloqloisih3dskr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7RNo0s9kycG-bV1Xc_B1O2K-q2VF3mrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68847248294-8q8j2aiee47o6gjds6bqhg4m1s0dg6vr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68847248294-tdcu1iniigcs46etht9l6sae26nph82j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.riseConstructionAiBot"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68847248294:android:6933e0b1794648fd2ce567",
+        "android_client_info": {
+          "package_name": "com.example.rise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68847248294-vef8bvuf67djb4etdjloqloisih3dskr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7RNo0s9kycG-bV1Xc_B1O2K-q2VF3mrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68847248294-8q8j2aiee47o6gjds6bqhg4m1s0dg6vr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68847248294-tdcu1iniigcs46etht9l6sae26nph82j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.riseConstructionAiBot"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
