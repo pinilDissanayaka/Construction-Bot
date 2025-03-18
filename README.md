@@ -18,6 +18,12 @@ No complicated menus—just chat with the AI, and it will guide you through ever
 - Orchestration: LangChain + LangGraph for structured AI workflows
 - Database: PostgreSQL for storing user data, projects, and transactions
 
+## UI Screenshots 
+![WhatsApp Image 2025-03-18 at 13 49 43_a7b69e42](https://github.com/user-attachments/assets/30f975df-bd6f-4b67-82d7-8dec20de2916)
+![WhatsApp Image 2025-03-18 at 13 49 44_a86065f3](https://github.com/user-attachments/assets/3b83151b-cc89-4294-9778-3ee4e3e13c01)
+![WhatsApp Image 2025-03-18 at 13 49 44_aca4e483](https://github.com/user-attachments/assets/9727fac8-8fae-4ab4-b5f2-e4083223d9d4)
+
+
 ## How It Works 
 ### AI-Powered Construction Q&A
 
@@ -52,6 +58,7 @@ cd Construction-Bot
 2. Backend Setup (FastAPI + LangChain + PostgreSQL)
 - Create a virtual environment and install dependencies
 ```
+cd Backend
 python -m venv env
 source env/bin/activate  # Windows: env\Scripts\activate
 pip install -r requirements.txt
